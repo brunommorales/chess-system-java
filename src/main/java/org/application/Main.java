@@ -1,10 +1,9 @@
 package org.application;
 
-import boardgame.Position;
+import boardgame.Board;
 
 public class Main {
     public static void main(String[] args) {
-        var pos = new Position(3, 5);
-        System.out.println(pos);
+        var board = new Board(8, 8);
     }
 }
