@@ -1,9 +1,10 @@
 package org.application;
 
-import boardgame.Board;
+import chess.ChessMatch;
 
 public class Main {
     public static void main(String[] args) {
-        var board = new Board(8, 8);
+        var chessMatch = new ChessMatch();
+        UI.printBoard(chessMatch.getPieces());
     }
 }
