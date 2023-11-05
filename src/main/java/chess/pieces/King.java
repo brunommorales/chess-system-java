@@ -13,14 +13,14 @@ public class King extends ChessPiece {
 
     @Override
     public String toString() {
-        return "K";
+        StringBuilder sb = new StringBuilder();
+        sb.append("K");
+        return sb.toString();
     }
-
     private boolean canMove(Position position) {
         ChessPiece p = (ChessPiece)getBoard().piece(position);
         return p == null || p.getColor() != getColor();
     }
-
     @Override
     public boolean[][] possibleMoves() {
         boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
