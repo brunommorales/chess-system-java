@@ -66,4 +66,4 @@ Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) par
 
 ---
 
-Feito com ❤️ por [Bruno Morales](https://github.com/brunommorales)
+Feito com ❤️ por [Bruno](https://github.com/brunommorales)
