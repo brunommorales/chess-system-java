@@ -112,14 +112,11 @@ public class UI {
                 .collect(Collectors.groupingBy(ChessPiece::getColor));
 
         System.out.println("Captured pieces:");
-        System.out.print("White: ");
-        System.out.print(ANSI_WHITE);
-        System.out.println(Arrays.toString(capturedByColor.getOrDefault(Color.WHITE, Collections.emptyList()).toArray()));
-        System.out.print(ANSI_RESET);
-
-        System.out.print("Black: ");
-        System.out.print(ANSI_YELLOW);
-        System.out.println(Arrays.toString(capturedByColor.getOrDefault(Color.BLACK, Collections.emptyList()).toArray()));
-        System.out.print(ANSI_RESET);
+        capturedByColor.forEach((color, pieces) -> {
+            System.out.print(color + ": ");
+            System.out.print(color == Color.WHITE ? ANSI_WHITE : ANSI_YELLOW);
+            System.out.println(Arrays.toString(pieces.toArray()));
+            System.out.print(ANSI_RESET);
+        });
     }
 }
